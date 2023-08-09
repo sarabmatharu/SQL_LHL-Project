@@ -9,3 +9,22 @@ SELECT *
 FROM information_schema.tables
 WHERE table_schema = 'public';
 
+Data Types & Nullability
+
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_name = 'all_sessions';
+
+Data Validation
+
+Checking for duplicate data
+
+SELECT fullvisitorid, COUNT(*)
+FROM public.all_sessions
+GROUP BY fullvisitorid
+HAVING COUNT(*) > 1;
+
+
+
+
+
