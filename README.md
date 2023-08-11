@@ -44,4 +44,4 @@ Copying analytics table to database. As I was using pgadmin but this table conta
 Execution of more complex queries to retrieve data from tables. 
 
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+i used diffrent SQL queries to extract data from database like information on Products sold, units in stock, price per unit, total number of unique visitos, finding all duplicate data, sales for a particular country, city with high transaction revenue level, average products ordered,, pattren in produts & many more information like this. 
