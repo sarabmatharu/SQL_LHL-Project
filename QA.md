@@ -5,24 +5,28 @@ Data validation is the very important step while dealing with data. In data vali
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
-SELECT *
-FROM information_schema.tables
-WHERE table_schema = 'public';
+Data Profiling:
+My first step was to Identify schema of database. Data profiling provides information on the characteristics of a database, such as rows, columns, average values. It helps to discover data, Understand data characteristics, giving more confidence to trust data
+understadning database also helps us to avoid any errors. 
+Avohelps us avoid such assumptions. Afer understanding data we can also imrove data where needed.
 
-Data Types & Nullability
+## identify schema
+ SELECT *
+ FROM information_schema.tables
+ WHERE table_schema = 'public';
 
-SELECT column_name, data_type, is_nullable
-FROM information_schema.columns
-WHERE table_name = 'all_sessions';
+## Data Types & Nullability - Check data types of columns & also nullability.
 
-Data Validation
+ SELECT column_name, data_type, is_nullable
+ FROM information_schema.columns
+ WHERE table_name = 'all_sessions';
 
-Checking for duplicate data
+## Data Validation - Checking for duplicate data
 
-SELECT fullvisitorid, COUNT(*)
-FROM public.all_sessions
-GROUP BY fullvisitorid
-HAVING COUNT(*) > 1;
+ SELECT fullvisitorid, COUNT(*)
+ FROM public.all_sessions
+ GROUP BY fullvisitorid
+ HAVING COUNT(*) > 1;
 
 
 
