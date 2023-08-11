@@ -28,6 +28,15 @@ Avohelps us avoid such assumptions. Afer understanding data we can also imrove d
  GROUP BY fullvisitorid
  HAVING COUNT(*) > 1;
 
+ ## Standrize Names :
+  UPDATE all_sessions
+  SET country = CASE
+  WHEN country IN ('USA', 'United States') THEN 'United States'
+  WHEN country = 'UK' THEN 'United Kingdom'
+  ELSE country
+  END;
+
+
 
 
 
